@@ -7,7 +7,7 @@ public class Plot {
     private int bedRooms;
     private int beds;
     private double plotSize;
-    private String facilities;
+    private LinkedList<String> facilities;
     private double costPerNight;
     //Photo of plot
 }
