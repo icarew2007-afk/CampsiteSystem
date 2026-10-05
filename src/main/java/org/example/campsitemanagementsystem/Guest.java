@@ -66,4 +66,8 @@ public class Guest {
     public void setBookings(LinkedList<Booking> bookings) {
         this.bookings = bookings;
     }
+
+    public void addBooking(Booking booking){
+        bookings.add(booking);
+    }
 }

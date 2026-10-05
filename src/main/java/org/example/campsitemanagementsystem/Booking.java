@@ -8,7 +8,7 @@ public class Booking {
     private String campingArea;
     private String bookedGuest;
     private int numGuests;
-    private LinkedList<Plot> plot;
+    private LinkedList<Plot> plots;
     private LinkedList<String> preferences;
 
     public Booking(int identifier,String startDate,String endDate,String campSite,String campingArea,String bookedGuest,int numGuests){
@@ -19,7 +19,7 @@ public class Booking {
         this.campingArea=campingArea;
         this.bookedGuest=bookedGuest;
         this.numGuests=numGuests;
-        plot = new LinkedList<>();
+        plots = new LinkedList<>();
         preferences= new LinkedList<>();
     }
 
@@ -80,11 +80,11 @@ public class Booking {
     }
 
     public LinkedList<Plot> getPlot() {
-        return plot;
+        return plots;
     }
 
     public void setPlot(LinkedList<Plot> plot) {
-        this.plot = plot;
+        this.plots = plot;
     }
 
     public LinkedList<String> getPreferences() {
@@ -93,5 +93,9 @@ public class Booking {
 
     public void setPreferences(LinkedList<String> preferences) {
         this.preferences = preferences;
+    }
+
+    public void addPlot(Plot plot){
+        plots.add(plot);
     }
 }

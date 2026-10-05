@@ -53,4 +53,20 @@ public class LinkedList<T> {
         return result;
     }
 
+    public String listObjectElements() {
+        String result = "";
+        Node<T> current = head;
+
+        while (current != null) {
+            result += current.getData().toString() + "\n";
+            current = current.getNext();
+        }
+
+        return result;
+    }
+
+    //get size
+
+
+
 }

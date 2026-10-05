@@ -58,7 +58,9 @@ public class Campsite {
         return facilities.get(i);
     }
 
-
+    public CampingArea getAreaByIndex(int i){
+        return campingAreas.get(i);
+    }
 
     public void addCampingArea(CampingArea area){
         campingAreas.add(area);
@@ -70,5 +72,9 @@ public class Campsite {
 
     public String listFacilities(){
        return facilities.listElements();
+    }
+
+    public String listCampingAreas(){
+        return campingAreas.listObjectElements();
     }
 }

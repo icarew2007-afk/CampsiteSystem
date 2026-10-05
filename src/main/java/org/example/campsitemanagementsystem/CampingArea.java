@@ -11,7 +11,7 @@ public class CampingArea {
         this.description = description;
 
     }
-
+    //for each to add facilities upwarsds
 
     public String getIdentifier() {
         return identifier;
@@ -35,5 +35,19 @@ public class CampingArea {
 
     public void setPlots(LinkedList<Plot> plots) {
         this.plots = plots;
+    }
+
+    public void addPlots(Plot plot){
+        plots.add(plot);
+    }
+
+    public Plot getPlotByIndex(int index){
+        return plots.get(index);
+    }
+
+
+
+    public String toString() {
+        return "Area identifier: "+identifier+" Description: "+description;
     }
 }
