@@ -63,11 +63,44 @@ public class Guest {
         return bookings;
     }
 
+    public int countBookings(){
+        return bookings.getSize();
+    }
+
     public void setBookings(LinkedList<Booking> bookings) {
         this.bookings = bookings;
     }
 
     public void addBooking(Booking booking){
         bookings.add(booking);
+    }
+
+    public String listBookings(){
+        if(bookings.getSize()==0){
+            return "Guest has no bookings";
+        }
+        else {
+            return bookings.listObjectElements();
+        }
+    }
+
+    public String removeBooking(int i){
+        if(bookings.getSize()==0){
+            return "There are no bookings to cancel";
+        }
+        else{
+            Booking bookingToCancel = bookings.get(i);
+            if(bookingToCancel==null){
+                return "There is no booking at this index";
+            }
+            else{
+                bookings.remove(bookingToCancel);
+                return "Booking removed";
+            }
+        }
+    }
+
+    public String toString(){
+        return "Identifier: "+identifier+", Name: "+name+", Date of Birth: "+dateOfBirth+", Email: "+email+", Phone Number "+phoneNumber+", Bookings: "+countBookings();
     }
 }

@@ -5,6 +5,7 @@ public class Campsite {
     private String address;
     private int numStars;
     private String contactInfo;
+    private int numAreas;
     private LinkedList<String> facilities;
     private LinkedList<CampingArea> campingAreas;
 
@@ -62,6 +63,10 @@ public class Campsite {
         return campingAreas.get(i);
     }
 
+    public int countAreas(){
+        return  campingAreas.getSize();
+    }
+
     public void addCampingArea(CampingArea area){
         campingAreas.add(area);
     }
@@ -76,5 +81,9 @@ public class Campsite {
 
     public String listCampingAreas(){
         return campingAreas.listObjectElements();
+    }
+
+    public String toString(){
+        return "Campsite Name: "+name+", Campsite Address: "+address+", Star Rating: "+numStars+", Contact Info: "+contactInfo+", Camping Areas: "+countAreas();
     }
 }

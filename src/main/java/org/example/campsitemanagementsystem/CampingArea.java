@@ -45,9 +45,17 @@ public class CampingArea {
         return plots.get(index);
     }
 
+    public String listPlots(){
+        return plots.listObjectElements();
+    }
+
+    public int countPlots(){
+        return plots.getSize()-1;
+    }
+
 
 
     public String toString() {
-        return "Area identifier: "+identifier+" Description: "+description;
+        return "Area identifier: "+identifier+" Description: "+description+", Plots: "+countPlots();
     }
 }

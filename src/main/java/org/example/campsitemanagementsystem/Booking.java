@@ -98,4 +98,8 @@ public class Booking {
     public void addPlot(Plot plot){
         plots.add(plot);
     }
+
+    public String toString(){
+        return "Booking ID: "+identifier+", Start Date: "+startDate+", End Date: "+endDate+", Campsite: "+campSite+", Camping Area: "+campingArea+", Booked Guest: "+bookedGuest+", Number of Guests: "+numGuests;
+    }
 }
